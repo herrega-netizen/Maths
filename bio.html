@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 11 Biology Quiz (1-30)</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; background-color: #f4f7f6; padding: 20px; color: #333; }
+        .container { max-width: 850px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 4px solid #27ae60; padding-bottom: 10px; }
+        .instructions { font-style: italic; text-align: center; color: #666; margin-bottom: 30px; }
+        .question-card { margin-bottom: 25px; padding: 20px; border: 1px solid #e1e4e8; border-radius: 10px; transition: 0.3s; }
+        .question-card:hover { border-color: #27ae60; background-color: #fafffa; }
+        .question-text { font-weight: bold; font-size: 1.1em; display: block; margin-bottom: 15px; }
+        .options { list-style: none; padding: 0; }
+        .options li { margin-bottom: 10px; }
+        label { display: block; padding: 10px 15px; background: #fff; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; }
+        label:hover { background: #f0f0f0; }
+        input[type="radio"] { margin-right: 12px; transform: scale(1.2); }
+        .feedback { margin-top: 15px; padding: 10px; border-radius: 5px; font-weight: bold; display: none; }
+        .correct { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .incorrect { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .btn-print { display: block; width: 200px; margin: 20px auto; padding: 10px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        @media print { .btn-print { display: none; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Biology Evaluation Question: Grade 11</h1>
+    <p class="instructions">Questions 1-30. Select an option to reveal the answer.</p>
+
+    <form id="quizForm">
+        <!-- Q1 -->
+        <div class="question-card">
+            <span class="question-text">1. Which device is used for investigating information on diseases or cancerous areas?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q1" onclick="check(1, 'A', 'B')"> A. CITS</label></li>
+                <li><label><input type="radio" name="q1" onclick="check(1, 'B', 'B')"> B. CT scan</label></li>
+                <li><label><input type="radio" name="q1" onclick="check(1, 'C', 'B')"> C. PET scan</label></li>
+                <li><label><input type="radio" name="q1" onclick="check(1, 'D', 'B')"> D. None</label></li>
+            </ul>
+            <div id="fb-1" class="feedback"></div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="question-card">
+            <span class="question-text">2. Which is NOT an impact of biology on society and the natural world?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q2" onclick="check(2, 'A', 'D')"> A. Food security</label></li>
+                <li><label><input type="radio" name="q2" onclick="check(2, 'B', 'D')"> B. Improved health</label></li>
+                <li><label><input type="radio" name="q2" onclick="check(2, 'C', 'D')"> C. Toxicity from pesticides</label></li>
+                <li><label><input type="radio" name="q2" onclick="check(2, 'D', 'D')"> D. Increase in industrial production due to microbial action</label></li>
+            </ul>
+            <div id="fb-2" class="feedback"></div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="question-card">
+            <span class="question-text">3. Which scientific discipline uses computer technology to analyze DNA sequences?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q3" onclick="check(3, 'A', 'A')"> A. Bioinformatics</label></li>
+                <li><label><input type="radio" name="q3" onclick="check(3, 'B', 'A')"> B. Biomedical</label></li>
+                <li><label><input type="radio" name="q3" onclick="check(3, 'C', 'A')"> C. Biophysical</label></li>
+                <li><label><input type="radio" name="q3" onclick="check(3, 'D', 'A')"> D. Biogeographical</label></li>
+            </ul>
+            <div id="fb-3" class="feedback"></div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="question-card">
+            <span class="question-text">4. All are categorised under poikilothermic (cold-blooded) animals except?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q4" onclick="check(4, 'A', 'D')"> A. Fish</label></li>
+                <li><label><input type="radio" name="q4" onclick="check(4, 'B', 'D')"> B. Reptiles</label></li>
+                <li><label><input type="radio" name="q4" onclick="check(4, 'C', 'D')"> C. Amphibians</label></li>
+                <li><label><input type="radio" name="q4" onclick="check(4, 'D', 'D')"> D. Birds</label></li>
+            </ul>
+            <div id="fb-4" class="feedback"></div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="question-card">
+            <span class="question-text">5. Which of the following is NOT an Invertebrate?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q5" onclick="check(5, 'A', 'B')"> A. Arthropoda</label></li>
+                <li><label><input type="radio" name="q5" onclick="check(5, 'B', 'B')"> B. Mammals</label></li>
+                <li><label><input type="radio" name="q5" onclick="check(5, 'C', 'B')"> C. Annelida</label></li>
+                <li><label><input type="radio" name="q5" onclick="check(5, 'D', 'B')"> D. Mollusca</label></li>
+            </ul>
+            <div id="fb-5" class="feedback"></div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="question-card">
+            <span class="question-text">6. Which is correct about Invertebrate animals?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q6" onclick="check(6, 'A', 'D')"> A. Lack rigid internal skeleton</label></li>
+                <li><label><input type="radio" name="q6" onclick="check(6, 'B', 'D')"> B. No backbone</label></li>
+                <li><label><input type="radio" name="q6" onclick="check(6, 'C', 'D')"> C. Soft-bodied / Exoskeleton</label></li>
+                <li><label><input type="radio" name="q6" onclick="check(6, 'D', 'D')"> D. All are correct</label></li>
+            </ul>
+            <div id="fb-6" class="feedback"></div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="question-card">
+            <span class="question-text">7. What is the primary characteristic of vertebrates?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q7" onclick="check(7, 'A', 'B')"> A. Cold-blooded</label></li>
+                <li><label><input type="radio" name="q7" onclick="check(7, 'B', 'B')"> B. Backbone</label></li>
+                <li><label><input type="radio" name="q7" onclick="check(7, 'C', 'B')"> C. Single-cell</label></li>
+            </ul>
+            <div id="fb-7" class="feedback"></div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="question-card">
+            <span class="question-text">8. What do we call the group of animals with a backbone?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q8" onclick="check(8, 'A', 'A')"> A. Vertebrates</label></li>
+                <li><label><input type="radio" name="q8" onclick="check(8, 'B', 'A')"> B. Invertebrates</label></li>
+            </ul>
+            <div id="fb-8" class="feedback"></div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="question-card">
+            <span class="question-text">9. Which of the following is a characteristic of birds?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q9" onclick="check(9, 'B', 'B')"> B. They breathe by lungs.</label></li>
+                <li><label><input type="radio" name="q9" onclick="check(9, 'D', 'B')"> D. They are cold-blooded.</label></li>
+            </ul>
+            <div id="fb-9" class="feedback"></div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="question-card">
+            <span class="question-text">10. What type of skeletal structure do humans possess?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q10" onclick="check(10, 'C', 'C')"> C. Endoskeleton</label></li>
+                <li><label><input type="radio" name="q10" onclick="check(10, 'B', 'C')"> B. Exoskeleton</label></li>
+            </ul>
+            <div id="fb-10" class="feedback"></div>
+        </div>
+
+        <!-- Q11 -->
+        <div class="question-card">
+            <span class="question-text">11. Key evolutionary advantage of a vertebral column?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q11" onclick="check(11, 'C', 'C')"> C. Increased mobility</label></li>
+                <li><label><input type="radio" name="q11" onclick="check(11, 'A', 'C')"> A. Improved digestion</label></li>
+            </ul>
+            <div id="fb-11" class="feedback"></div>
+        </div>
+
+        <!-- Q12 -->
+        <div class="question-card">
+            <span class="question-text">12. Correct order of frog life cycle?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q12" onclick="check(12, 'A', 'A')"> A. Eggs, Tadpole, Froglet, Frog</label></li>
+                <li><label><input type="radio" name="q12" onclick="check(12, 'B', 'A')"> B. Eggs, Froglet, Tadpole, Frog</label></li>
+            </ul>
+            <div id="fb-12" class="feedback"></div>
+        </div>
+
+        <!-- Q13 -->
+        <div class="question-card">
+            <span class="question-text">13. After a frog egg hatches, what is it called?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q13" onclick="check(13, 'B', 'B')"> B. Tadpole</label></li>
+                <li><label><input type="radio" name="q13" onclick="check(13, 'D', 'B')"> D. Frog</label></li>
+            </ul>
+            <div id="fb-13" class="feedback"></div>
+        </div>
+
+        <!-- Q14 -->
+        <div class="question-card">
+            <span class="question-text">14. What organ does an adult frog use to breathe?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q14" onclick="check(14, 'C', 'C')"> C. Lungs</label></li>
+                <li><label><input type="radio" name="q14" onclick="check(14, 'A', 'C')"> A. Gills</label></li>
+            </ul>
+            <div id="fb-14" class="feedback"></div>
+        </div>
+
+        <!-- Q15 -->
+        <div class="question-card">
+            <span class="question-text">15. How many stages in the life cycle of a frog?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q15" onclick="check(15, 'C', 'C')"> C. 4</label></li>
+                <li><label><input type="radio" name="q15" onclick="check(15, 'B', 'C')"> B. 3</label></li>
+            </ul>
+            <div id="fb-15" class="feedback"></div>
+        </div>
+
+        <!-- Q16 -->
+        <div class="question-card">
+            <span class="question-text">16. Correct life cycle of a bee?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q16" onclick="check(16, 'B', 'B')"> B. Egg, larva, pupa, adult</label></li>
+                <li><label><input type="radio" name="q16" onclick="check(16, 'A', 'B')"> A. Egg, pupa, larva, adult</label></li>
+            </ul>
+            <div id="fb-16" class="feedback"></div>
+        </div>
+
+        <!-- Q17 -->
+        <div class="question-card">
+            <span class="question-text">17. Which part of the oviduct is NOT correctly matched?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q17" onclick="check(17, 'A', 'A')"> A. Vagina: Funnel-shaped upper portion</label></li>
+                <li><label><input type="radio" name="q17" onclick="check(17, 'D', 'A')"> D. Uterus: Eggshell formation</label></li>
+            </ul>
+            <div id="fb-17" class="feedback"></div>
+        </div>
+
+        <!-- Q18 -->
+        <div class="question-card">
+            <span class="question-text">18. Role of insects in agricultural productivity?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q18" onclick="check(18, 'D', 'D')"> D. All are correct</label></li>
+            </ul>
+            <div id="fb-18" class="feedback"></div>
+        </div>
+
+        <!-- Q19 -->
+        <div class="question-card">
+            <span class="question-text">19. Insects are considered harmful because they:</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q19" onclick="check(19, 'D', 'D')"> D. All are correct answers</label></li>
+            </ul>
+            <div id="fb-19" class="feedback"></div>
+        </div>
+
+        <!-- Q20 -->
+        <div class="question-card">
+            <span class="question-text">20. Which involves trial and error learning?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q20" onclick="check(20, 'A', 'A')"> A. Operant conditioning</label></li>
+                <li><label><input type="radio" name="q20" onclick="check(20, 'B', 'A')"> B. Habituation</label></li>
+            </ul>
+            <div id="fb-20" class="feedback"></div>
+        </div>
+
+        <!-- Q21 -->
+        <div class="question-card">
+            <span class="question-text">21. Baby ostriches following the first moving object seen is:</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q21" onclick="check(21, 'B', 'B')"> B. Innate behavior</label></li>
+                <li><label><input type="radio" name="q21" onclick="check(21, 'D', 'B')"> D. Learned behavior</label></li>
+            </ul>
+            <div id="fb-21" class="feedback"></div>
+        </div>
+
+        <!-- Q22 -->
+        <div class="question-card">
+            <span class="question-text">22. Which is NOT true about instinctive behavior?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q22" onclick="check(22, 'A', 'A')"> A. It can be developed further through learning</label></li>
+                <li><label><input type="radio" name="q22" onclick="check(22, 'C', 'A')"> C. It has a fixed action pattern</label></li>
+            </ul>
+            <div id="fb-22" class="feedback"></div>
+        </div>
+
+        <!-- Q23 -->
+        <div class="question-card">
+            <span class="question-text">23. Forgetting an unpleasant smell over time is called:</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q23" onclick="check(23, 'C', 'C')"> C. Habituation</label></li>
+                <li><label><input type="radio" name="q23" onclick="check(23, 'A', 'C')"> A. Latent learning</label></li>
+            </ul>
+            <div id="fb-23" class="feedback"></div>
+        </div>
+
+        <!-- Q24 -->
+        <div class="question-card">
+            <span class="question-text">24. Example of orientational innate behavior?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q24" onclick="check(24, 'A', 'A')"> A. Kineses in woodlice</label></li>
+                <li><label><input type="radio" name="q24" onclick="check(24, 'B', 'A')"> B. Blinking of eyes</label></li>
+            </ul>
+            <div id="fb-24" class="feedback"></div>
+        </div>
+
+        <!-- Q25 -->
+        <div class="question-card">
+            <span class="question-text">25. Which is NOT true about innate behaviors?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q25" onclick="check(25, 'A', 'A')"> A. Can be improved by trial and error</label></li>
+                <li><label><input type="radio" name="q25" onclick="check(25, 'C', 'A')"> C. Present at birth</label></li>
+            </ul>
+            <div id="fb-25" class="feedback"></div>
+        </div>
+
+        <!-- Q26 -->
+        <div class="question-card">
+            <span class="question-text">26. Suddenly removing hand from a hot object is:</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q26" onclick="check(26, 'A', 'A')"> A. Reflex action</label></li>
+            </ul>
+            <div id="fb-26" class="feedback"></div>
+        </div>
+
+        <!-- Q27 -->
+        <div class="question-card">
+            <span class="question-text">27. Which behavior match is INCORRECT?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q27" onclick="check(27, 'E', 'E')"> E. All are correctly matched</label></li>
+            </ul>
+            <div id="fb-27" class="feedback"></div>
+        </div>
+
+        <!-- Q28 -->
+        <div class="question-card">
+            <span class="question-text">28. Responsible for plant bending towards light?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q28" onclick="check(28, 'B', 'B')"> B. Faster growth on the dark side</label></li>
+            </ul>
+            <div id="fb-28" class="feedback"></div>
+        </div>
+
+        <!-- Q29 -->
+        <div class="question-card">
+            <span class="question-text">29. Which of the following is a learned behavior?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q29" onclick="check(29, 'B', 'B')"> B. Conditioned salivation in dogs</label></li>
+                <li><label><input type="radio" name="q29" onclick="check(29, 'A', 'B')"> A. Suckling in newborns</label></li>
+            </ul>
+            <div id="fb-29" class="feedback"></div>
+        </div>
+
+        <!-- Q30 -->
+        <div class="question-card">
+            <span class="question-text">30. Primary role of insulin?</span>
+            <ul class="options">
+                <li><label><input type="radio" name="q30" onclick="check(30, 'B', 'B')"> B. To decrease blood sugar levels</label></li>
+                <li><label><input type="radio" name="q30" onclick="check(30, 'A', 'B')"> A. To increase blood sugar levels</label></li>
+            </ul>
+            <div id="fb-30" class="feedback"></div>
+        </div>
+
+    </form>
+    <button class="btn-print" onclick="window.print()">Print Quiz</button>
+</div>
+
+<script>
+    function check(qNum, selected, correct) {
+        const feedback = document.getElementById('fb-' + qNum);
+        feedback.style.display = 'block';
+        if (selected === correct) {
+            feedback.innerHTML = "✓ Correct! The answer is " + correct;
+            feedback.className = "feedback correct";
+            const inputs = document.getElementsByName('q' + qNum);
+            inputs.forEach(input => input.disabled = true);
+        } else {
+            feedback.innerHTML = "✗ Incorrect. Try again!";
+            feedback.className = "feedback incorrect";
+        }
+    }
+</script>
+
+</body>
+</html>
